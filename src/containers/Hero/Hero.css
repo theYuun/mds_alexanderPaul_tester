@@ -2,8 +2,9 @@ div.hero__root {
     position: sticky;
     top: 0px;
     left: 0px;
-    margin-top: -15vh;
+    margin-top: -15vw;
     z-index: var(--z-hero);
+    height: 115vh;
 }
 
 .hero__pic{
