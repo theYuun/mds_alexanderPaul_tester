@@ -1,0 +1,20 @@
+div.hero__root {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    margin-top: -15vh;
+    z-index: var(--z-hero);
+}
+
+.hero__pic{
+    min-width: 100%;
+    min-height: 100vh;
+    overflow:hidden;
+    background-color: green;
+}
+
+.hero__discover-button {
+    position: fixed;
+    bottom: 10vh;
+    right: 75px;
+}

@@ -1,0 +1,69 @@
+:root {
+    --image-container-bound: 20px;
+    --image-scale: 100%;
+    --image-position: 0;
+    --text-opacity: 0;
+    --discover-button-bottom: 5%;
+}
+
+.product__root {
+    position: relative;
+    aspect-ratio: 1/1;
+    /*
+    box-shadow: inset 0 0 0 2px black;
+    */
+    display: flex;
+    transition: padding 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.product__root:hover {
+    --image-scale: 120%;
+    --image-position: -5%;
+    --discover-button-bottom: -40%;
+    --image-container-bound: 40px;
+    --text-opacity: 1;
+}
+
+div:has(>.product__image) {
+    position: absolute;
+    top: var(--image-container-bound);
+    left: var(--image-container-bound);
+    bottom: var(--image-container-bound);
+    right: var(--image-container-bound);
+    transition: top 0.5s ease-in-out,
+                left 0.5s ease-in-out,
+                bottom 0.5s ease-in-out,
+                right 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.product__image {
+    min-width: var(--image-scale);
+    min-height: auto;
+    transform: translate(var(--image-position), var(--image-position));
+    transition: min-width 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+
+.product__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    
+    font-size: 32px;
+    text-align: center;
+    opacity: var(--text-opacity);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.product__discover-button {
+    position: absolute;
+    left: 50%;
+    bottom: var(--discover-button-bottom);
+    transform: translateX(-50%);
+    transition: bottom 0.5s ease-in-out;
+}

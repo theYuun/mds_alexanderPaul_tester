@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React from 'react'
+
+import { Header, Hero, InfoSection01, Products, Footer } from './containers';
+import { Navbar } from './components';
+
+import images from '../src/assets';
+import productData from '../src/constants/productData.json'
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div>
+      <Navbar />
+      <Header />
+      <Hero image={images.product01} category={productData.product01.category} title={productData.product01.title} url={productData.product01.url} />
+      {/*}
+    */}
+      <InfoSection01 />
+      <Products />
+      <Footer />
+  </div>
+);
 
 export default App;

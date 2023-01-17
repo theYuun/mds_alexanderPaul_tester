@@ -1,0 +1,15 @@
+.infoSection01__root {
+    position: relative;
+    background-color: var(--color-accent);
+    display: flex;
+    z-index: var(--z-info);
+}
+
+.infoSection01__heading {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 12vw;
+    text-align: center;
+    padding: 10% 0%;
+    color: #0001;
+}

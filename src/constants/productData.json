@@ -1,0 +1,22 @@
+{
+    "product01": {
+        "category": "TOTAALRENOVATIE",
+        "title": "AMSTERDAM",
+        "url": "#"
+    },
+    "product02": {
+        "category": "category02",
+        "title": "title02",
+        "url": "#"
+    },
+    "product03": {
+        "category": "category03",
+        "title": "title03",
+        "url": "#"
+    },
+    "product04": {
+        "category": "category04",
+        "title": "title04",
+        "url": "#"
+    }
+}
