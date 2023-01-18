@@ -2,20 +2,35 @@ div.hero__root {
     position: sticky;
     top: 0px;
     left: 0px;
-    margin-top: -15vw;
+    margin-top: -15vh;
     z-index: var(--z-hero);
     height: 115vh;
+
+    overflow: hidden;
 }
 
 .hero__pic{
-    min-width: 100%;
-    min-height: 100vh;
-    overflow:hidden;
-    background-color: green;
+    margin-left: 50%;
+    transform: translateX(-45%);
+    height: max-content;
+    width: auto;
 }
 
 .hero__discover-button {
     position: fixed;
     bottom: 10vh;
     right: 75px;
+}
+
+@media screen and (max-width: 700px) {
+    div.hero__root {
+        bottom: 100vh;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .hero__pic{
+        margin-left: 0;
+        transform: translateX(0);
+    }
 }

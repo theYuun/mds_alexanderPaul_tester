@@ -9,7 +9,9 @@ const Product = ({ image, category, title, url }) => {
     <div className='product__root'>
       <div>
         <img className='product__image' src={image}></img>
-        <span className='product__text'>Discover our {category} collection</span>
+        {/*
+  */}
+        <span className='product__text'>Discover More</span>
         <div className='product__discover-button'>
           <DiscoverButton category={category} title={title} url={url} />
         </div>

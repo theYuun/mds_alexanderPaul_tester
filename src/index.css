@@ -2,6 +2,7 @@
     --color-bg: #000;
     --color-main: #fff;
     --color-accent: #3e3f32;
+    --color-accent-opaque: #3e3f3288;
     --color-border: #0005;
     --ease-quart: cubic-bezier(0.77,0,0.175,1);
 
@@ -9,6 +10,8 @@
     --z-hero: 1;
     --z-info: 2;
     --z-products: 3;
+
+    --responsive-width-700: 700px;
 }
 
 html{

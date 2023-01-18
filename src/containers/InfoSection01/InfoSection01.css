@@ -1,6 +1,6 @@
 .infoSection01__root {
     position: relative;
-    background-color: var(--color-accent);
+    background-color: var(--color-main);
     display: flex;
     z-index: var(--z-info);
 }

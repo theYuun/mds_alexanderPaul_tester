@@ -9,10 +9,14 @@ import product08 from './08.webp';
 import product09 from './09.webp';
 import product10 from './10.webp';
 import about from './About.webp';
-import logoWhite from './logo_white.svg';
 import logo from './logo.svg';
+import logoWhite from './logo_white.svg';
+import logoV from './logo_veloretti.svg';
 import gb from './gb.svg';
 import nl from './nl.svg';
+import product21 from './product21.jpg';
+import product22 from './product22.jpg';
+import product23 from './product23.png';
 
 export default {
     product01,
@@ -26,8 +30,12 @@ export default {
     product09,
     product10,
     about,
-    logoWhite,
     logo,
+    logoWhite,
+    logoV,
     gb,
     nl,
+    product21,
+    product22,
+    product23,
 };

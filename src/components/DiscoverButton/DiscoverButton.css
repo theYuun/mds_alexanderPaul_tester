@@ -14,10 +14,13 @@
 
 .discover-button__description {
     background-color: var(--color-accent);
-    padding: 20px;
-    padding-left: 30px;
+    padding: 40px;
+    padding-left: 60px;
 
     border-radius: 20px 0 0 20px;
+}
+.discover-button__description h1 {
+
 }
 
 .discover-button__description h4 {
@@ -75,5 +78,7 @@
 
     .discover-button__description {
         background-color: var(--color-accent);
+        padding: 30px;
+        padding-right: 20px;
     }
 }
