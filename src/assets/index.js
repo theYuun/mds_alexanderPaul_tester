@@ -17,6 +17,8 @@ import nl from './nl.svg';
 import product21 from './product21.jpg';
 import product22 from './product22.jpg';
 import product23 from './product23.png';
+import reference_navbar from './references/navbar.jpg';
+import reference_navbar_smaller from './references/navbar_smaller.jpg';
 
 export default {
     product01,
@@ -38,4 +40,6 @@ export default {
     product21,
     product22,
     product23,
+    reference_navbar,
+    reference_navbar_smaller,
 };

@@ -8,6 +8,10 @@ import './Navbar.css';
 
 const LinksGB = () => (
   <>
+  {/*
+  <li><a href='#'>ELECTRIC<div className='underline' /></a></li>
+  <li><a href='#'>CITY<div className='underline' /></a></li>
+*/}
   <li><a href='#'>HOME<div className='underline' /></a></li>
   <li><a href='#'>PROJECTS<div className='underline' /></a></li>
   <li><a href='#'>FAQ<div className='underline' /></a></li>
@@ -109,6 +113,9 @@ const Navbar = () => {
       <div className='navbar__quote'>
         <div onClick={() => {}} className='navbar__quote-button'>Quote</div>
       </div>
+      {/*
+      <img src={images.reference_navbar} className='reference'></img>
+      */}
     </nav>
   )
 }
