@@ -1,0 +1,198 @@
+.footer__root {
+    position: relative;
+    z-index: var(--z-section);
+    background-color: var(--color-main);
+    color: black;
+    background-attachment: fixed;
+}
+
+.footer__content h4 {
+    font-weight: 400;
+    font-size: 1.75vw;
+}
+
+.footer__root li, .footer__root a, .footer__root a:visited {
+    color: black;
+    font-size: 1.25vw;
+    font-weight: 400;
+}
+
+.footer__banner {
+    width: 100%;
+    height: 10vw;
+    padding: 4.33vw 0;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: var(--border);
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 14.5vw);
+}
+
+.footer__content-left {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding: 3vw 5vw;
+}
+
+.footer__content-left h4, .footer__content-right h4 {
+    color: black;
+    font-weight: 400;
+    padding-bottom: 1vw;
+}
+
+.footer__content-left-list {
+    color: black;
+    font-weight: 400;
+}
+
+.footer__content-left-list li {
+    padding-bottom: 1vw;
+    line-height: 1vw;
+}
+
+.footer__content-left-social {
+    display: flex;
+    align-items: center;
+    height: 2vw;
+}
+
+.footer__content-left-social-icons {
+    fill: var(--color-accent);
+    font-size: 1vw;
+    margin-right: 1vw;
+}
+
+.footer__content-left-copyright {
+    /*
+    */
+    color: black;
+    font-size: 1vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+}
+
+.footer__content-left-copyright div {
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    background-color: black;
+    margin: 0 0.5vw;
+}
+
+.footer__content-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding: 3vw 5vw;
+}
+/*
+.footer__content-right::after {
+    position: absolute;
+    top: -10%;
+    left: 5px;
+    width: 1px;
+    height: 120%;
+    background-color: var(--color-border);
+    content: "";
+}
+*/
+
+.footer__content-right-sections {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__content-right-icons {
+    margin-top: 1vw;
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer__content-right-links {
+    margin-top: 1vw;
+    color: var(--color-accent);
+    fill: var(--color-accent);
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    margin-left: 1vw;
+}
+
+.footer__content-right-icon, .footer__content-right-link {
+    height: 2vw;
+    width: auto;
+    margin-bottom: 1vw;
+    color: var(--color-accent);
+    fill: var(--color-accent);
+}
+
+.link-mds, .link-mds:visited {
+    color: blue !important;
+    margin-left: 0.5vw !important;
+    text-decoration: underline !important;
+}
+
+.footer__bottom {
+    position: relative;
+    height: 7vw;
+    background-color: var(--color-main);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 6vw;
+    border-top: var(--border);
+    pointer-events: none;
+
+}
+
+.footer__bottom-left {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-size: 1vw;
+}
+
+.trustpilot-rating {
+    color: black;
+}
+
+.trustpilot-image {
+    margin-left: 0.5vw;
+    transform: translateY(0.25vw);
+    width: 1.5vw;
+}
+
+.trustpilot-heading {
+    margin-left: 0.5vw;
+    font-size: 1vw;
+    font-weight: 900;
+    color: black;
+}
+
+.trustpilot-based {
+    margin-left: 0.5vw;
+    color: black;
+}
+
+.footer__bottom-right {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.payment-options {
+    font-size: 1.25vw;
+    fill: var(--color-payment-options);
+    margin: 0 0.5vw;
+}

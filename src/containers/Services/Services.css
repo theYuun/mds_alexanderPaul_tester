@@ -1,0 +1,115 @@
+.services__root {
+    position: relative;
+    z-index: var(--z-section);
+
+    width: 100%;
+    height: 90vw;
+
+    background-color: var(--color-main);
+}
+
+.services__image-container {
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    
+    position: absolute;
+
+    aspect-ratio: 1 / 1.25;
+
+    overflow: hidden;
+}
+
+.services__image-container-01 {
+    width: 47%;
+    top: 1%;
+    left: 3%;
+}
+
+.services__image-01 {
+    height: 100%;
+}
+
+.services__image-container-02 {
+    width: 30%;
+    aspect-ratio: 1 / 1.5;
+    top: 32%;
+    left: 38%;
+    /*
+    add parallax scrolling effect
+    */
+}
+
+.services__image-02 {
+    height: 100%;
+    transform: translateX(-15%);
+}
+
+.services__text-container {
+    position: absolute;
+    
+    width: 32.5%;
+    height: 35%;
+    top: 24%;
+    left: 58.5%;
+    background-color: var(--color-main);
+    
+    color: var(--color-accent);
+    padding: 3%;
+    
+    border: 1px solid var(--color-border);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.services__text-prompt {
+    font-weight: 400;
+    font-size: 3vw;
+    color: var(--color-accent);
+    margin-bottom: 1vh;
+}
+
+.services__text-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-bottom: 1%;
+    font-size: 2.5vw;
+    color: var(--color-accent);
+
+}
+
+.services__text-button-arrow {
+    width: 3.5vw;
+    aspect-ratio: 1 / 1;
+    margin-left: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+}
+
+.services__image-container-03 {
+    width: 20%;
+    right: 3%;
+    top: 4.5%;
+}
+
+.services__image-03 {
+    height: 100%;
+    transform: translateX(-10%);
+}
+
+/*
+----------
+----------
+----------
+----------
+*/
+

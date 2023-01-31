@@ -1,48 +1,41 @@
-import React, { useState } from 'react'
+import React, { useState, Suspense } from 'react'
+import i18n from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 import images from '../../assets/index';
 
 import { AiOutlineInstagram, AiOutlineMail, AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { HiMenuAlt4 } from 'react-icons/hi';
 
 import './Navbar.css';
 
-const LinksGB = () => (
+/*
+const Links = () => (
   <>
-  {/*
-  <li><a href='#'>ELECTRIC<div className='underline' /></a></li>
-  <li><a href='#'>CITY<div className='underline' /></a></li>
-*/}
-  <li><a href='#'>HOME<div className='underline' /></a></li>
-  <li><a href='#'>PROJECTS<div className='underline' /></a></li>
-  <li><a href='#'>FAQ<div className='underline' /></a></li>
-  <li><a href='#'>BLOG<div className='underline' /></a></li>
-  <li><a href='#'>CONTACT<div className='underline' /></a></li>
+  <li><a href='#'>{t('LINK_BATHROOMS')}<div className='underline' /></a></li>
+  <li><a href='#'>{t('LINK_TOTAL_RENO')}<div className='underline' /></a></li>
   </>
 )
-
 const LinksNL = () => (
   <>
-  <li><a href='#'>HOME<div className='underline' /></a></li>
-  <li><a href='#'>PROJEKTEN<div className='underline' /></a></li>
-  <li><a href='#'>FAQ<div className='underline' /></a></li>
-  <li><a href='#'>BLOG<div className='underline' /></a></li>
-  <li><a href='#'>CONTACT<div className='underline' /></a></li>
-  </>
+  <li><a href='#'>BADKAMERS<div className='underline' /></a></li>
+  <li><a href='#'>TOTALE RENOVATIE<div className='underline' /></a></li>
+</>
 )
-
-
-/*
-let widthCounter = document.getElementById('width-counter');
-document.addEventListener('mousemove', () => {widthCounter.innerText = window.innerWidth});
-<div id='width-counter' />
 */
+
 const Navbar = () => {
+  /*
   const [ toggleLanguage, setLanguage ] = useState(true);
-  const [ toggleMenu, setMenu ] = useState(false);
+  */
+ const [ toggleMenu, setMenu ] = useState(false);
+ 
+ const { t } = useTranslation();
+
   return (
     <nav className='navbar__root'>
       <div onClick={() => { setMenu(!toggleMenu) }} className='navbar__links-button'>
-        <AiOutlineMenu />
+        <HiMenuAlt4 />
       </div>
       {
         toggleMenu &&
@@ -70,11 +63,14 @@ const Navbar = () => {
               </div>
             </div>
             <ul className='navbar__dropdown-links-list'>
-            {
+              <li><a href='#'>{t('navbar_bathrooms')}<div className='underline' /></a></li>
+              <li><a href='#'>{t('navbar_total_reno')}<div className='underline' /></a></li>
+            {/*
+              <Links />
               toggleLanguage
               ? <LinksGB />
               : <LinksNL />
-            }
+            */}
             </ul>
           </div>
         )
@@ -96,25 +92,45 @@ const Navbar = () => {
         </svg>
       </div>
       <ul className='navbar__links'>
-      {
+        <li><a href='#'>{t('navbar_bathrooms')}<div className='underline' /></a></li>
+        <li><a href='#'>{t('navbar_total_reno')}<div className='underline' /></a></li>
+      {/*
+        <Links />
         toggleLanguage
         ? <LinksGB />
         : <LinksNL />
-      }
+      */}
       </ul>
-      <div className='navbar__spacer' />
-      <div className='navbar__language'>
-        {
+      <div className='spacer navbar__spacer' />
+      <div className='navbar__language navbar__content-centering'>
+        <div className='navbar__language-chosen navbar__content-centering'>{i18n.language === 'en' ? 'EN' : 'NL'}<img className='navbar__language-chosen-flag' id={i18n.language === 'en' ? 'en' : 'nl'} src={i18n.language === 'en' ? images.en : images.nl} alt={i18n.language === 'en' ? 'English' : 'Dutch'} /></div>
+        {/*
           toggleLanguage
-          ? <img id='gb' className='navbar__language-gb' src={images.gb} alt='English' onClick={() => setLanguage(false)}></img>
-          : <img id='nl' className='navbar__language-nl' src={images.nl} alt='Dutch' onClick={() => setLanguage(true)}></img>
-        }
+          ? <Language language='en'/>
+          : <Language language='nl'/>
+        */}
+        <div className='navbar__language-selector-tab navbar__content-centering'>
+          <div onClick={() => {i18n.changeLanguage('en')}} >EN<img className='navbar__language-img' src={images.en} alt='English'/><div className="underline" /></div>
+          <hr />
+          <div onClick={() => {i18n.changeLanguage('nl')}} >NL<img className='navbar__language-img' src={images.nl} alt='Dutch'/><div className="underline" /></div>
+          {/*
+          <div onClick={() => setLanguage(true)} >EN<img className='navbar__language-img' src={images.en} alt='English'/><div className="underline" /></div>
+          <hr />
+          <div onClick={() => setLanguage(false)} >NL<img className='navbar__language-img' src={images.nl} alt='Dutch'/><div className="underline" /></div>
+          */}
+        </div>
       </div>
-      <div className='navbar__quote'>
-        <div onClick={() => {}} className='navbar__quote-button'>Quote</div>
+      <div className="navbar__quote navbar__content-centering">
+        <a href='#' onClick={() => {
+          document.getElementById('quote__root').classList.toggle('quote__show');
+          document.getElementById('quote__root').classList.toggle('quote__hide');
+          }} className='navbar__quote-button'>{t('navbar_quote')}<div className='underline' /></a>
       </div>
       {/*
-      <img src={images.reference_navbar} className='reference'></img>
+      <img src={images.reference_navbar_mobile} className='reference'></img>
+      <img src={images.reference_navbar_smaller} className='reference'></img>
+      <img src={images.reference_navbar_dd} className='reference_dd'></img>
+      <img src={images.reference_navbar_dd_smaller} className='reference_dd'></img>
       */}
     </nav>
   )

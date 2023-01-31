@@ -1,28 +1,14 @@
 .products__root {
     position: relative;
     background-color: var(--color-main);
-    z-index: var(--z-products);
-}
+    z-index: var(--z-section);
 
-.products__top {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.products__top-straggler {
-    display: none;
-}
-
-@media screen and (max-width: 700px) {
-    .products__top {
+@media screen and (max-width: 900px) {
+    .products__root {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .products__top-straggler {
-        display: initial;
-    }
-
-    .products__bottom {
-        display: none;
     }
 }

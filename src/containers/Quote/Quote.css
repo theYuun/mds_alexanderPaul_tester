@@ -1,20 +1,267 @@
+:root {
+    --quote-blur: 0px;
+    --quote-blur-back: 100px;
+    --quote-opacity: 0;
+    --quote-pointer-events: none;
+
+    --scrollbar-width-non-quote: initial;
+    --scrollbar-width-quote: 0px;
+}
+
+@keyframes quote-error {
+    0% {
+        border: 2px solid red;
+        background-color: #f003;
+    }
+    100% {
+        border: 1px solid var(--color-border);
+        background-color: #fff;
+    }
+}
+
+@keyframes quote-open {
+    0% {
+
+        filter: blur(100px);
+        backdrop-filter: blur(0px);
+        opacity: 0;
+        pointer-events: none;
+    }
+    100% {
+
+        filter: blur(0px);
+        backdrop-filter: blur(100px);
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+@keyframes quote-close {
+    0% {
+
+        filter: blur(0px);
+        backdrop-filter: blur(100px);
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+
+        filter: blur(100px);
+        backdrop-filter: blur(0px);
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
 .quote__root {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+
+    filter: blur(100px);
+    backdrop-filter: blur(0px);
+    opacity: 0;
+    pointer-events: all;
+    
+    z-index: var(--z-quote);
+
+    isolation: isolate;
+
+    overflow-y:scroll;
+}
+
+.quote__root::-webkit-scrollbar {
+    width: 0px;
+  }
+
+.quote__hide {
+    animation: quote-close 0.5s forwards;
+}
+
+.quote__show {
+    animation: quote-open 0.5s forwards;
+}
+
+.quote__form {
     position: absolute;
+    width: 30%;
+
+    right: 10%;
+    top: 7%;
+    bottom: 7%;
+
+    background-color: var(--color-main);
+    
+    display: flex;
+    flex-wrap: wrap;
+    /*
+    */
+    padding: 3% 2vw;
+
+    border-radius: 15px;
+}
+
+.quote__root span, .quote__root h1, .quote__root label {
+    color: var(--color-accent);
+}
+
+.quote__top {
     width: 100%;
-    height: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.quote__form-heading {
+    position: relative;
+    width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    z-index: 20000;
+    font-size: 2vw;
+    font-weight: 400;
 }
 
-.quote__panel {
-    width: 50%;
-    max-width: 300px;
-    height: 300px;
+.quote__form-close {
+    position: absolute;
+    right: 1.5vw;
 
-    background-color: var(--color-main);
-    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3vw;
+    aspect-ratio: 1 / 1;
+    
+    color: var(--color-accent);
+    font-size: 2vw;
+    font-weight: 300;
+
+    border-radius: 50%;
+    border:1px solid var(--color-accent);
+
+    cursor: pointer;
+}
+
+.quote__form-input-container, .quote__form-submit-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2vh;
+    /*
+    */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.quote__form-input, .quote__form-submit {
+    height: 100%;
+    width: 100%;
+    /*
+    margin: 0.5vh 1vw;
+    */
+    padding: 0.25vw 1vw;
+
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    
+    color: black;
+    font-size: 2vw;
+}
+
+.quote__form-submit-container {
+    height: 10vw;
+}
+
+.quote__form-submit {
+    background-color: var(--color-accent);
+    color: var(--color-main);
+    
+    border: 1px solid var(--color-border);
+    font-weight: 300;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.quote__form-submit-disabled {
+    color: var(--color-quote-submit-disabled);
+    background-color: var(--color-border);
+}
+
+.quote__message-success {
+    z-index: calc(var(--z-quote) + 1);
+}
+
+.quote__error {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: calc(var(--z-quote) + 1);
+    opacity: var(--error-opacity);
+    transition: opacity 1s ease-out, display 1s;
+
+    font-size: 1vw;
+
+    cursor: pointer;
+}
+
+.quote__input-error {
+    animation: quote-error 1s 1 forwards;
+}
+
+/*
+----------
+----------
+----------
+----------
+----------
+----------
+*/
+
+@media screen and (max-width: 900px) {
+    .quote__form {
+        width: 80%;
+        top: 5vh;
+        bottom: 5vh;
+    }
+    .quote__form-heading {
+        margin: 1vh 0;
+        width: 100%;
+        
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        
+        font-size: 4vw;
+    }
+    
+    .quote__form-close {
+        right: 2.25vw;
+        width: 4.5vw;
+        height: 4.5vw;
+        font-size: 4vw;
+    }
+    
+    .quote__form-input-container, .quote__form-submit-container {
+        height: 8vh;
+    }
+    
+    .quote__form-input, .quote__form-submit {
+        font-size: 2.5vw;
+    }
+    
+    .quote__form-submit-container {
+        height: 15vh;
+    }
+    
+    .quote__form-submit {
+        font-size: 3vw;
+    }
 }

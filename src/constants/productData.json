@@ -1,22 +1,38 @@
 {
-    "product01": {
-        "category": "Bathroom Renovations",
-        "title": "More",
+    "Products": [{
+        "category": "prod_cat_bathroom",
+        "mainStyle": "Amstelveen",
+        "subtitle":"",
         "url": "#"
     },
-    "product02": {
-        "category": "Total Renovations",
-        "title": "More",
+    {
+        "category": "prod_cat_bathroom",
+        "mainStyle": "Amsterdam",
+        "subtitle":"Herengracht",
         "url": "#"
     },
-    "product03": {
-        "category": "category03",
-        "title": "title03",
+    {
+        "category": "prod_cat_bathroom",
+        "mainStyle": "Rivierenbuurt",
+        "subtitle":"Amsterdam",
         "url": "#"
     },
-    "product04": {
-        "category": "category04",
-        "title": "title04",
+    {
+        "category": "prod_cat_bathroom",
+        "mainStyle": "Antwerp-South",
+        "subtitle":"",
         "url": "#"
-    }
+    },
+    {
+        "category": "prod_cat_total",
+        "mainStyle": "Kinkerstraat",
+        "subtitle":"Amsterdam",
+        "url": "#"
+    },
+    {
+        "category": "prod_cat_total",
+        "mainStyle": "Amsterdam",
+        "subtitle":"",
+        "url": "#"
+    }]
 }

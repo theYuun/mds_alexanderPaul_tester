@@ -2,32 +2,60 @@
     --color-bg: #000;
     --color-main: #fff;
     --color-accent: #3e3f32;
+    --color-accent-transparent: #3e3f3200;
     --color-accent-opaque: #3e3f3288;
     --color-border: rgba(20,22,21,0.1);
+    --color-text-placeholder: #fff5;
+    --color-payment-options: #0005;
+
+    --color-quote-submit-disabled: #888;
+
     --ease-quart: cubic-bezier(0.77,0,0.175,1);
 
-    --z-navbar: 9999;
+    --z-navbar: 9000;
     --z-hero: 1;
-    --z-info: 2;
-    --z-products: 3;
-
-    --responsive-width-700: 700px;
+    --z-section: 1000;
+    --z-quote: 10000;
 }
 
-html{
-}
-
-* {
-    box-sizing: border-box;
+*,
+*::before,
+*::after,
+*:visited {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    background-clip: border-box;
+
     list-style: none;
-    text-decoration: none;
     
     font-family: 'Roboto', sans-serif;
-    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    color: var(--color-main);
 }
 
 body {
     -webkit-font-smoothing: antialiased;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.reference {
+    isolation: isolate;
+    z-index: 30000;
+
+    position: fixed;
+    /*
+    top: var(--navbar-height);
+    */
+    width:100%;
+    height: auto;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    opacity: 0.5;
+    pointer-events: none;
 }

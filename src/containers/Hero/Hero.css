@@ -1,15 +1,36 @@
-div.hero__root {
-    position: sticky;
-    top: 0px;
-    left: 0px;
-    margin-top: -15vh;
+:root {
+    --hero-root-height: 100vh;
+    --hero-root-bottom: 15vh;
+    --hero__pic-offset: -15vh;
+    --hero__discover-button-position: fixed;
+    --hero__discover-button-width: 20vw;
+    --hero__discover-button-height: 8.25vw;
+    --hero__discover-button-right: 9vw;
+    --hero__discover-button-bottom: 3vw;
+    --hero__discover-button-left: 70vw;
+    /*
+    */
+}
+
+.hero__root {
+    position: relative;
+    bottom: var(--hero-root-bottom);
+    left: 0;
+    margin-top: calc(0px - var(--navbar-height));
+    /*
+    */
     z-index: var(--z-hero);
-    height: 115vh;
+    height: var(--hero-root-height);
+    width: auto;
 
     overflow: hidden;
+
+    background-color: black;
 }
 
 .hero__pic{
+    position: var(--hero__discover-button-position);
+    bottom: var(--hero__pic-offset);
     margin-left: 50%;
     transform: translateX(-45%);
     height: max-content;
@@ -17,14 +38,37 @@ div.hero__root {
 }
 
 .hero__discover-button {
-    position: fixed;
-    bottom: 10vh;
-    right: 75px;
+    position: var(--hero__discover-button-position);
+    bottom: var(--hero__discover-button-bottom);
+    right: var(--hero__discover-button-right);
+    left: var(--hero__discover-button-left);
+    /*
+    width: var(--hero__discover-button-width);
+    */
+    height: var(--hero__discover-button-height);
+    background-color: orange;
 }
 
-@media screen and (max-width: 700px) {
-    div.hero__root {
-        bottom: 100vh;
+@media screen and (max-width: 900px) {
+    
+    :root {
+        --hero-root-height: 140vh;
+        --hero-root-bottom: 0vh;
+
+        --hero__pic-offset: 0vh;
+        
+        --hero__discover-button-position: absolute;
+        
+        --hero__discover-button-right: 27.5vw;
+        /*
+        --hero__discover-button-bottom: 10vw;
+        */
+        --hero__discover-button-height: 32vw;
+        --hero__discover-button-left: 14.5vw;
+    }
+
+    .hero__pic{
+        position: relative;
     }
 }
 

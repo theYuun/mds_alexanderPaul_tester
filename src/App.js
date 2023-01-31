@@ -1,25 +1,40 @@
-import React from 'react'
+import React, { Suspense, useState } from 'react'
+import { Formik } from 'formik';
+import ReactDOM from 'react-dom';
 
-import { Header, Hero, InfoSection01, Products, Quote, Footer } from './containers';
+import { Hero, InfoSection01, InfoSection02, Services, Products, Quote, Newsletter, Footer } from './containers';
 import { Navbar } from './components';
 
 import images from '../src/assets';
-import productData from '../src/constants/productData.json'
+import getProduct from '../src/constants/Products.js';
 
 import './App.css';
 
-const App = () => (
-  <div>
+const App = () => {
+  return (
+    <Suspense fallback="loading">
       <Navbar />
-      <Header />
-      <Hero image={images.product23} category={productData.product01.category} title={productData.product01.title} url={productData.product01.url} />
-      <InfoSection01 />
-      <Products />
       {/*
-      <Quote />
     */}
+      <Hero
+        image={getProduct('Hero', 0, true).image}
+        category={getProduct('Hero', 0, true).category}
+        url={getProduct('Hero', 0, true).url} />
+      <InfoSection01 />
+      <Products
+        products={[0,2]} />
+      <InfoSection02 />
+      <Services />
+      <Quote />
+      <Newsletter />
       <Footer />
-  </div>
-);
+      {/*
+      <img className='reference' src={images.ref} />
+      <img className='reference' src={images.ref_big} />
+    <img className='reference' src={images.ref_m} />
+    */}
+    </Suspense>
+  )
+};
 
 export default App;
