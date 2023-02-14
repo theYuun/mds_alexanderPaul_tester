@@ -1,8 +1,9 @@
-import React, { Suspense, useState } from 'react'
-import { Formik } from 'formik';
-import ReactDOM from 'react-dom';
+import React, { Suspense } from 'react'
+import { Routes, Route } from 'react-router-dom';
 
-import { Hero, InfoSection01, InfoSection02, Services, Products, Quote, Newsletter, Footer } from './containers';
+import { HomePage, ProductsPage } from './pages/index';
+
+import { Quote, Newsletter, Footer } from './containers';
 import { Navbar } from './components';
 
 import images from '../src/assets';
@@ -14,18 +15,22 @@ const App = () => {
   return (
     <Suspense fallback="loading">
       <Navbar />
+      <Quote />
+      <Routes>
+        <Route path='/' element={ <HomePage /> } />
+        <Route path='products' element={ <ProductsPage /> } />
+      </Routes>
       {/*
-    */}
       <Hero
         image={getProduct('Hero', 0, true).image}
         category={getProduct('Hero', 0, true).category}
         url={getProduct('Hero', 0, true).url} />
       <InfoSection01 />
       <Products
-        products={[0,2]} />
+        products={[1,5]} />
       <InfoSection02 />
-      <Services />
-      <Quote />
+      <Services images={[2, 5, 1]} />
+    */}
       <Newsletter />
       <Footer />
       {/*

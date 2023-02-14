@@ -4,6 +4,12 @@ import { useTranslation } from 'react-i18next';
 
 import './Quote.css';
 
+export function ToggleQuote()
+{
+  document.getElementById('quote__root').classList.toggle('quote__show');
+  document.getElementById('quote__root').classList.toggle('quote__hide');
+}
+
 const initialValues = {
   name: "",
   surname: "",

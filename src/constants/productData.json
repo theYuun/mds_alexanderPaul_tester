@@ -3,36 +3,36 @@
         "category": "prod_cat_bathroom",
         "mainStyle": "Amstelveen",
         "subtitle":"",
-        "url": "#"
+        "url": "products"
     },
     {
         "category": "prod_cat_bathroom",
         "mainStyle": "Amsterdam",
         "subtitle":"Herengracht",
-        "url": "#"
+        "url": "products"
     },
     {
         "category": "prod_cat_bathroom",
         "mainStyle": "Rivierenbuurt",
         "subtitle":"Amsterdam",
-        "url": "#"
+        "url": "products"
     },
     {
         "category": "prod_cat_bathroom",
         "mainStyle": "Antwerp-South",
         "subtitle":"",
-        "url": "#"
+        "url": "products"
     },
     {
         "category": "prod_cat_total",
         "mainStyle": "Kinkerstraat",
         "subtitle":"Amsterdam",
-        "url": "#"
+        "url": "products"
     },
     {
         "category": "prod_cat_total",
         "mainStyle": "Amsterdam",
         "subtitle":"",
-        "url": "#"
+        "url": "products"
     }]
 }

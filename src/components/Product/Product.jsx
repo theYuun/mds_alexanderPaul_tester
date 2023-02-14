@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DiscoverButton from '../DiscoverButton/DiscoverButton';
+import { DiscoverButton } from '../index';
 
 import './Product.css';
 

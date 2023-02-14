@@ -21,7 +21,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 quote_submit: "SUBMIT",
                 discover_more: "Discover More",
                 info_01: "UNIQUE DESIGNS",
-                services_button: "start designing",
+                start_design_button: "start designing",
                 prod_cat_bathroom: "BATHROOM RENOVATION",
                 prod_cat_total: "Total Renovation",
                 info_02_top:{
@@ -42,7 +42,20 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 footer_blog:"Blog",
                 footer_contact:"Contact",
                 footer_website: "Website by",
-
+                building_heading: "WHEN BUILDING BECOMES ART",
+                process_heading: "OUR PROCESS",
+                process_estimate_heading: "ESTIMATE",
+                process_estimate_info: "In no time, we will estimate your required renovation budget with the labor and material costs!",
+                process_dimensions_heading: "VISITS AND MEASUREMENTS",
+                process_dimensions_info: "We will come to your home and measure everything precisely.",
+                process_quote_heading: "QUOTE",
+                process_quote_info: "We work hard to make a fair offer.",
+                process_designs_heading: "DESIGNS",
+                process_designs_info: "We meticulously design a beautiful and unique space for you based on your needs and wishes.",
+                process_renovation_heading: "THE RENOVATION",
+                process_renovation_info: "We bring our great team to renovate your old space into a new masterpiece.",
+                process_enjoy_heading: "ENJOY YOUR NEW BATHROOM",
+                process_enjoy_info: "Light the candles and enjoy your new bathroom.",
             }
         },
         nl:{
@@ -79,6 +92,20 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 footer_blog:"Blog",
                 footer_contact:"Contact",
                 footer_website: "Website door",
+                building_heading: "WHEN BUILDING BECOMES ART",
+                process_heading: "ONS PROCES",
+                process_estimate_heading: "Schatting",
+                process_estimate_info: "In een mum van tijd schatten we uw benodigde renovatie budget in met de arbeids- en materiaalkosten!",
+                process_dimensions_heading: "Bezoek en metingen",
+                process_dimensions_info: "Wij komen bij u thuis om alles nauwkeurig op te meten.",
+                process_quote_heading: "offerte",
+                process_quote_info: "We werken er hard aan om een ​​eerlijke offerte te maken.",
+                process_designs_heading: "Ontwerpen",
+                process_designs_info: "We ontwerpen minutieus een mooie en unieke ruimte voor u op basis van uw behoeften en wensen.",
+                process_renovation_heading: "de renovatie",
+                process_renovation_info: "We brengen ons geweldige team om uw oude ruimte te renoveren tot een nieuw meesterwerk.",
+                process_enjoy_heading: "Veel plezier met uw nieuwe badkamer",
+                process_enjoy_info: "Steek de kaarsen aan en geniet van uw nieuwe badkamer.",
             }
         }
     }

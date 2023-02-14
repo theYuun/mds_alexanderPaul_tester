@@ -1,6 +1,6 @@
 :root{
     --color-bg: #000;
-    --color-main: #fff;
+    --color-main: white; /*rgb(250,250,240);*/
     --color-accent: #3e3f32;
     --color-accent-transparent: #3e3f3200;
     --color-accent-opaque: #3e3f3288;
@@ -33,6 +33,9 @@
     font-weight: 300;
     text-decoration: none;
     color: var(--color-main);
+    /*
+    background-color: bisque;
+    */
 }
 
 body {

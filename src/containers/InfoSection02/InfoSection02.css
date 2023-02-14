@@ -10,7 +10,7 @@
     align-content: space-between;
     background-color: var(--color-main);
     z-index: var(--z-section);
-    padding: 2vw 3vw 3vw;
+    padding: 6vw 3vw;
 }
 
 .infoSection02__heading {

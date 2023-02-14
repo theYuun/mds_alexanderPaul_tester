@@ -1,0 +1,80 @@
+.buildingArt__root {
+    position: relative;
+
+    /*
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 1vw;
+    */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1vw;
+    
+    background-color: var(--color-main);
+    z-index: var(--z-section);
+    padding: 5vw 3vw;
+}
+
+.buildingArt__root div {
+    /*
+    background-color: aqua;
+    */
+}
+
+.buildingArt__portrait {
+    /*
+    background-color: orange;
+    */
+    position: relative;
+}
+
+.buildingArt__portrait-image {
+    /*
+    margin-top: 50%;
+    position: absolute;
+    */
+    position: sticky;
+    top: 0px;
+
+    width: 100%;
+    border-radius: 3vw;
+    padding: 1vw;
+    /*
+    transform: translate3d(5px, 5px, -150px);
+    transform: rotate3d(-1, 1, 0, 30deg);
+    */
+}
+
+.buildingArt__article {
+    /*
+    background-color: purple;
+    */
+}
+
+.buildingArt__article-heading {
+    font-size: 4vw;
+    font-weight: 400;
+    line-height: 3.5vw;
+    color: var(--color-accent);
+    /*
+    background-color: green;
+    */
+    margin: 1vw;
+}
+
+.buildingArt__article-content p{
+    color: var(--color-accent);
+    font-size: 2vw;
+    line-height: 2.5vw;
+    margin: 2vw;
+    /*
+    width: 40vw;
+    background-color: blue;
+    */
+}
+
+.buildingArt__article-button {
+    margin: 2vw 3vw;
+    
+}
